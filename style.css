@@ -1,0 +1,130 @@
+.josefin-sans-normal {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+.dancing-script-normal {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+html {
+    background-image: url("img/background.png");
+    background-size: cover;
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+hr {
+    color: brown;
+    height: 15px;
+    width: 1000px
+}
+
+.menu {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, div {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+#menuDisplay {
+    position: absolute;
+    top: 110px;
+    left: 11%;
+    width: 500px;
+    word-wrap: break-word;
+    font-family: "Dancing Script", cursive;
+    font-size: x-large;
+    text-align: justify;
+}
+
+#divGeoData {
+    position: absolute;
+    top: 120px;
+    width: 600px;
+    right: 2%;
+    text-align: right;
+}
+
+#divAbout {
+    position: absolute;
+    top: 110px;
+    left: 1%;
+    width: 100px;
+    border: 2px solid #04AA6D;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#divHowToUse {
+    position: absolute;
+    top: 140px;
+    left: 1%;
+    width: 100px;
+    border: 2px solid #04AA6D;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#divDisclaimer {
+    position: absolute;
+    top: 170px;
+    left: 1%;
+    width: 100px;
+    border: 2px solid #04AA6D;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#divWhereWhen {
+    position: absolute;
+    top: 300px;
+    left: 1%;
+    width: 800px;
+    color: black;
+}
+
+#divDisplay {
+    position: absolute;
+    top: 380px;
+    left: 30%;
+    width: 800px;
+    color: black;
+}
+
+#advertisement {
+    position: absolute;
+    top: 300px;
+    right: 2%;
+    width: 30%;
+    color: black;
+}
+
+footer {
+    margin: 0.5%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+}

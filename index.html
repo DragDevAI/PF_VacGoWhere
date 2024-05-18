@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vacation Go Where</title>
+    <link rel="icon" href="img\vacIcon.ico" type="image/x-icon" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <div id="divAbout" class="menu">About</div>
+    <div id="divHowToUse" class="menu">Instruction</div>
+    <div id="divDisclaimer" class="menu">Disclaimer</div>
+    <div id="menuDisplay"></div>
+    <div id="divGeoData">
+        <h2>Hello, thank you for visiting my humble page</h2>
+        <h3>Today is: <p id="todayDisplay"></p></h3>
+        <h3>You are currently at: <p id="locationDisplay"></p></h3>
+    </div>
+    <div id="divWhereWhen">
+        <label for="destination">Choose a destination:</label>
+        <select id="dest" name="dest" onchange="selectDestFunction()">
+            <option value="Nil">Please select one</option>
+            <option value="JPY">Japan</option>
+            <option value="KRW">South Korea</option>
+            <option value="THB">Thailand</option>
+            <option value="VND">Vietnam</option>
+            <option value="IDR">Indonesia</option>
+            <option value="HKD">Hong Kong</option>
+            <option value="TWD">Taiwan</option>
+            <option value="AUD">Australia</option>
+            <option value="NZD">New Zealand</option>
+            <option value="EUR">Europe</option>
+        </select>
+        <p><i>(The above destinations are the most popular among Singaporeans)</i></p>
+    </div>
+    <div id="divDisplay">
+        <h4>Trivia about your destination:</h4>
+        <p>Capital: <span id="triviaCapital"></span></p>
+        <p>Area: <span id="triviaArea"></span></p>
+        <p>Population: <span id="triviaPopulation"></span></p>
+        <p>Car Side: <span id="triviaCarSide"></span></p>
+        <p>Time Zone: <span id="triviaTimeZone"></span></p>
+        <p><span id="triviaException"></span></p>
+    </br>
+        <h4>Exchange Rate:</h4>
+        <p>SGD vs <span id="destCurrency"></span>:</p>
+        <p id="pforExDisplay"></p>
+    </div>
+    <div id="advertisement">For advertisement
+        <p>NgeeAnn Poly rocks</p>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        &copy; 2024 by Ah Long
+    </footer>
+</body>
+</html>
