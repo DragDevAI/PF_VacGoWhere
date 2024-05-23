@@ -15,48 +15,86 @@
 </head>
 <body>
     <header></header>
-    <div id="divAbout" class="menu">About</div>
-    <div id="divHowToUse" class="menu">Instruction</div>
-    <div id="divDisclaimer" class="menu">Disclaimer</div>
-    <div id="menuDisplay"></div>
-    <div id="divGeoData">
-        <h2>Hello, thank you for visiting my humble page</h2>
-        <h3>Today is: <p id="todayDisplay"></p></h3>
-        <h3>You are currently at: <p id="locationDisplay"></p></h3>
+    <div id="divMenuBox">
+        <div id="divAbout" class="menu">About</div>
+        <div id="divHowToUse" class="menu">Instruction</div>
+        <div id="divDisclaimer" class="menu">Disclaimer</div>
+        <div id="menuDisplay"></div>
+    </div>
+    <hr id="hrBridge" />
+    <hr id="hrHang" />
+    <div id="divGeoDataBox">
+        <div id="divGeoData">
+            <h2>Welcome, my friends!</h2>
+            <h3>Today is: <p id="todayDisplay"></p></h3>
+            <h3>You are currently in: <p id="locationDisplay"></p></h3>
+        </div>
     </div>
     <div id="divWhereWhen">
         <label for="destination">Choose a destination:</label>
-        <select id="dest" name="dest" onchange="selectDestFunction()">
-            <option value="Nil">Please select one</option>
-            <option value="JPY">Japan</option>
-            <option value="KRW">South Korea</option>
-            <option value="THB">Thailand</option>
-            <option value="VND">Vietnam</option>
-            <option value="IDR">Indonesia</option>
-            <option value="HKD">Hong Kong</option>
-            <option value="TWD">Taiwan</option>
-            <option value="AUD">Australia</option>
-            <option value="NZD">New Zealand</option>
-            <option value="EUR">Europe</option>
+        <select id="dest">Please select one
+            <option value="jpn" selected="selected">Japan</option>
+            <option value="kor">South Korea</option>
+            <option value="tha">Thailand</option>
+            <option value="vnm">Vietnam</option>
+            <option value="idn">Indonesia</option>
+            <option value="hkg">Hong Kong</option>
+            <option value="twn">Taiwan</option>
+            <option value="aus">Australia</option>
+            <option value="nzl">New Zealand</option>
+            <optgroup label="Europe">
+                <option value="nld">Netherlands</option>
+                <option value="deu">Germany</option>
+                <option value="fra">France</option>
+                <option value="esp">Spain</option>
+                <option value="dnk">Denmark</option>
+                <option value="prt">Portugal</option>
+                <option value="ita">Italy</option>
+                <option value="cze">Czech</option>
+            </optgroup>
+            <option value="gbr">United Kingdom</option>
         </select>
         <p><i>(The above destinations are the most popular among Singaporeans)</i></p>
+    </br>
+        <label for="time">Which month you plan to go:</label>
+        <select id="month">Please select one
+            <option value="1" selected = "selected">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <p><i>(Historical temperature data of selected location/month.)</i></p>
     </div>
-    <div id="divDisplay">
-        <h4>Trivia about your destination:</h4>
+    <div id="divWeather">Under construction</div>
+    <div id="divTriviaDisplay">
+        <h4>Trivia about the destination of your choice:</h4>
         <p>Capital: <span id="triviaCapital"></span></p>
         <p>Area: <span id="triviaArea"></span></p>
         <p>Population: <span id="triviaPopulation"></span></p>
         <p>Car Side: <span id="triviaCarSide"></span></p>
         <p>Time Zone: <span id="triviaTimeZone"></span></p>
-        <p><span id="triviaException"></span></p>
+        <div id="divFlag"><img id="imgFlag" /></div>
     </br>
         <h4>Exchange Rate:</h4>
         <p>SGD vs <span id="destCurrency"></span>:</p>
-        <p id="pforExDisplay"></p>
+        <p id="pForexDisplay"></p>
+    </div>
+    <p id="pCanvas"></p>
+    <div id="divCanvas">
+        <canvas id="canvasChart"></canvas>
     </div>
     <div id="advertisement">For advertisement
         <p>NgeeAnn Poly rocks</p>
     </div>
+    <script src="chart.js"></script>
     <script src="script.js"></script>
     <footer>
         &copy; 2024 by Ah Long
