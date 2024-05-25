@@ -2,7 +2,7 @@
 This project aims to create a simple app-page to provide users with helpful information about the travel destination of their choice.
 
 ## Design Process
-The website is targeted to travellers who have no time to study the intended destination of their choice. By providing the users some information about the destination, we hope that the users would find it useful for their selection process. We start with the ten most popular destination for Singaporeans (based on Yahoo rankings) (including eight frequently visited countries within the Eurozone and UK), in the future, we may expand the scope to include more destinations. Users may find trivial and useful information on the country of destination. We also provide very basic vocalubary in local language as well as historical temperature data of the capital city of the destination country.
+The website is targeted to travellers who have no time to study the intended destination of their choice. By providing the users some information about the destination, we hope that the users would find it useful for their selection process. We start with the ten most popular destination for Singaporeans (based on Yahoo rankings) (including eight frequently visited countries within the Eurozone and UK), in the future, we may expand the scope to include more destinations. Users may find trivial and useful information on the country of destination. We also provide very basic vocabulary in local language as well as historical temperature data of the capital city of the destination country.
 
 We aim big, the intention is to create a one-stop-shop suite for travellers.
 
@@ -11,7 +11,7 @@ The site locates user by checking their IP address (no cheating please!), from w
 
 Key input by users include the destination of their preference, from which content will be retrieved from various APIs and fed to users.
 
-n the future the app may recommend users to book air-ticket and/or hotel, partnering with service providers in between the base and the destination.
+In the future the app may recommend users to book air-ticket and/or hotel, partnering with service providers in between the base and the destination.
 
 ## Technologies Used
 We are minion coders who have just started, so basic HTML, CCS and JavaScript together with API are used in this app.
