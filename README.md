@@ -2,14 +2,16 @@
 This project aims to create a simple app-page to provide users with helpful information about the travel destination of their choice.
 
 ## Design Process
-The website is targeted to travellers who have no time to study the intended destination of their choice. By providing the users some information about the destination, we hope that the users would find it useful for their selection process. We start with the ten most popular destination for Singaporeans (based on Yahoo rankings), in the future, we may expand the scope to include more destinations.
+The website is targeted to travellers who have no time to study the intended destination of their choice. By providing the users some information about the destination, we hope that the users would find it useful for their selection process. We start with the ten most popular destination for Singaporeans (based on Yahoo rankings) (including eight frequently visited countries within the Eurozone and UK), in the future, we may expand the scope to include more destinations. Users may find trivial and useful information on the country of destination. We also provide very basic vocalubary in local language as well as historical temperature data of the capital city of the destination country.
 
 We aim big, the intention is to create a one-stop-shop suite for travellers.
 
 ## Features
-The site locates user by checking their IP address (no cheating please!), from which we generate a "base" from where users travel. The base is useful to, for example, determine the base currency for the exchange rate (with the currency of the destination). In the future the app may recommend users to book air-ticket and/or hotel, partnering with service providers in between the base and the destination.
+The site locates user by checking their IP address (no cheating please!), from which we generate a "base" from where users travel.
 
-Future feature will also include input from user on their intended time of travel, from which the app provides historical weather information of the destination on the selected month of travelling.
+Key input by users include the destination of their preference, from which content will be retrieved from various APIs and fed to users.
+
+n the future the app may recommend users to book air-ticket and/or hotel, partnering with service providers in between the base and the destination.
 
 ## Technologies Used
 We are minion coders who have just started, so basic HTML, CCS and JavaScript together with API are used in this app.
@@ -22,7 +24,7 @@ We did try our best.
 ## Credits
 
 ### Content
-The language for about, how-to-use and disclaimer sections were drafted by ~~me~~my evil twin brother who is a qualified lawyer to practice laws at the Supreme Court of Singapore.
+The language for about, how-to-use and disclaimer sections were drafted by ~~me~~my evil twin brother who claims himself to be a qualified person for the purpose of the Legal Professional Act of Singapore.
 
 The reset css content was copied from [Josh Comeau website](https://www.joshwcomeau.com/css/custom-css-reset/).
 
@@ -54,3 +56,6 @@ Analysis of JSON documents used in this site was performed by JSON Path Finder.
 
 ## Acknowledgements
 I received inspiration for this project from Mr. Malcolm Yam and Mr. Donovan, our dear and beloved teachers.
+
+## Github Page
+https://dragdevai.github.io/PF_VacGoWhere/
