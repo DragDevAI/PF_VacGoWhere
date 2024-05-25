@@ -223,6 +223,8 @@ function getFlag(selectDest) {
 function getCharacter(selectDest) {
     let characterImg = document.getElementById("imgCharacter");
     characterImg.src = ("img\/" + selectDest + ".png");
+    let copyrightMsg = document.getElementById("pCopyright");
+    copyrightMsg.innerHTML = "<i>(Courtesy of World-Flags.org)</i>";
 }
 
 //Function to display the common words in local language

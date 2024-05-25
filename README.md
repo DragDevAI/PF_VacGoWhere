@@ -13,34 +13,44 @@ Future feature will also include input from user on their intended time of trave
 
 ## Technologies Used
 We are minion coders who have just started, so basic HTML, CCS and JavaScript together with API are used in this app.
+
 Graphical images were rendered by the open source [HTML Charts - chart.js](https://www.chartjs.org/)
 
 ## Testing
-Very painful
+We did try our best.
 
 ## Credits
 
 ### Content
-The language for about, how-to-use and disclamer sections were drafted by ~~me~~my evil twin brother who is a qualified lawyer to practice laws at the Supreme Court of Singapore
-The reset css content was copied from [Josh Comeau website](https://www.joshwcomeau.com/css/custom-css-reset/)
-The data on cost of McMeal around the world were retrived from [Numbeo website](https://www.numbeo.com/)
+The language for about, how-to-use and disclaimer sections were drafted by ~~me~~my evil twin brother who is a qualified lawyer to practice laws at the Supreme Court of Singapore.
+
+The reset css content was copied from [Josh Comeau website](https://www.joshwcomeau.com/css/custom-css-reset/).
+
+The data on cost of McMeal around the world were retrieved from [Numbeo website](https://www.numbeo.com/).
+
 Super cool Samurai characters representing the countries of choice were retrived from [World Flags website](https://world-flags.org/).
 Language of various countries in this app were translated by and obtained from Google Translate, save for Cantonese which were done via Microsoft Bing.
+
 Weather data were obtained from [Weather & Climate website](https://weather-and-climate.com/).
 
 ### Media
-The icon used in this site was provided by [UIcons](freepik.com)
-Flags used in this site were retrieved from [Flag Pedia](https://flagcdn.com/)
+The icon used in this site was provided by [UIcons](freepik.com).
+
+Flags used in this site were retrieved from [Flag Pedia](https://flagcdn.com/).
 
 ### APIs
-The IP addresses collected from users were so enabled via an API of [IPAPI](https://ipapi.co)
-The exchange rates used in this website were from public API of openexchange rates
-The trivia facts about the destination used in this website were from public API of [REST Countries](https://restcountries.com/)
-We have also generated our own API hosted on Github which provides information on cost of McMeal as at May 2024 in the countries covered under this app
+The IP addresses collected from users were so enabled via an API of [IPAPI](https://ipapi.co).
+
+The exchange rates used in this website were from public API of openexchange rates.
+
+The trivia facts about the destination used in this website were from public API of [REST Countries](https://restcountries.com/).
+
+We have also generated our own API hosted on Github which provides information on cost of McMeal as at May 2024 in the countries covered under this app.
 
 ### Fonts
-Fonts used in this site were public fonts obtained from Google Fonts
-Analysis of JSON documents used in this site was performed by JSON Path Finder
+Fonts used in this site were public fonts obtained from Google Fonts.
+
+Analysis of JSON documents used in this site was performed by JSON Path Finder.
 
 ## Acknowledgements
 I received inspiration for this project from Mr. Malcolm Yam and Mr. Donovan, our dear and beloved teachers.
