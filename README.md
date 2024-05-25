@@ -23,7 +23,10 @@ Very painful
 ### Content
 The language for about, how-to-use and disclamer sections were drafted by ~~me~~my evil twin brother who is a qualified lawyer to practice laws at the Supreme Court of Singapore
 The reset css content was copied from [Josh Comeau website](https://www.joshwcomeau.com/css/custom-css-reset/)
-The data on cost of McMeal around the world were retrived from Numbeo (https://www.numbeo.com/)
+The data on cost of McMeal around the world were retrived from [Numbeo website](https://www.numbeo.com/)
+Super cool Samurai characters representing the countries of choice were retrived from [World Flags website](https://world-flags.org/).
+Language of various countries in this app were translated by and obtained from Google Translate, save for Cantonese which were done via Microsoft Bing.
+Weather data were obtained from [Weather & Climate website](https://weather-and-climate.com/).
 
 ### Media
 The icon used in this site was provided by [UIcons](freepik.com)
@@ -40,4 +43,4 @@ Fonts used in this site were public fonts obtained from Google Fonts
 Analysis of JSON documents used in this site was performed by JSON Path Finder
 
 ## Acknowledgements
-I received inspiration for this project from Mr. Malcolm Yam, our dear and beloved teacher.
+I received inspiration for this project from Mr. Malcolm Yam and Mr. Donovan, our dear and beloved teachers.

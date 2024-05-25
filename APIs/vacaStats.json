@@ -1,0 +1,351 @@
+{
+    "Countries": [
+        {
+            "Selected": "SGD",
+            "Name": "Singapore",
+            "Price": "10.0"
+        },
+        {
+            "Selected": "jpn",
+            "Name": "Japan",
+            "Price": "6.47",
+            "Temperature": {
+                "Jan": [2,10],
+                "Feb": [2,11],
+                "Mar": [5,14],
+                "Apr": [10,19],
+                "May": [16,23],
+                "Jun": [19,26],
+                "Jul": [23,30],
+                "Aug": [25,32],
+                "Sep": [21,28],
+                "Oct": [16,23],
+                "Nov": [10,18],
+                "Dec": [5,13]
+            }
+        },
+        {
+            "Selected": "kor",
+            "Name": "South Korea",
+            "Price": "7.91",
+            "Temperature": {
+                "Jan": [-7,3],
+                "Feb": [-5,6],
+                "Mar": [0,12],
+                "Apr": [6,19],
+                "May": [12,24],
+                "Jun": [18,28],
+                "Jul": [22,30],
+                "Aug": [22,31],
+                "Sep": [17,27],
+                "Oct": [9,21],
+                "Nov": [2,13],
+                "Dec": [-5,5]
+            }
+        },
+        {
+            "Selected": "tha",
+            "Name": "Thailand",
+            "Price": "7.42",
+            "Temperature": {
+                "Jan": [23,33],
+                "Feb": [25,34],
+                "Mar": [27,35],
+                "Apr": [28,37],
+                "May": [28,36],
+                "Jun": [27,35],
+                "Jul": [27,34],
+                "Aug": [27,34],
+                "Sep": [26,34],
+                "Oct": [26,33],
+                "Nov": [25,34],
+                "Dec": [23,33]
+            }
+        },
+        {
+            "Selected": "vnm",
+            "Name": "Vietnam",
+            "Price": "6.35",
+            "Temperature": {
+                "Jan": [15,21],
+                "Feb": [16,23],
+                "Mar": [19,26],
+                "Apr": [22,30],
+                "May": [25,33],
+                "Jun": [27,35],
+                "Jul": [27,35],
+                "Aug": [26,34],
+                "Sep": [25,33],
+                "Oct": [23,31],
+                "Nov": [19,27],
+                "Dec": [15,23]
+            }
+        },
+        {
+            "Selected": "idn",
+            "Name": "Indonesia",
+            "Price": "4.21",
+            "Temperature": {
+                "Jan": [24,31],
+                "Feb": [24,31],
+                "Mar": [25,31],
+                "Apr": [25,32],
+                "May": [25,32],
+                "Jun": [24,32],
+                "Jul": [24,32],
+                "Aug": [24,32],
+                "Sep": [25,33],
+                "Oct": [25,33],
+                "Nov": [25,32],
+                "Dec": [25,31]
+            }
+        },
+        {
+            "Selected": "hkg",
+            "Name": "Hong Kong",
+            "Price": "7.77",
+            "Temperature": {
+                "Jan": [14,20],
+                "Feb": [16,21],
+                "Mar": [18,23],
+                "Apr": [21,26],
+                "May": [25,29],
+                "Jun": [27,31],
+                "Jul": [27,32],
+                "Aug": [27,32],
+                "Sep": [26,31],
+                "Oct": [24,29],
+                "Nov": [20,25],
+                "Dec": [16,21]
+            }
+        },
+        {
+            "Selected": "twn",
+            "Name": "Taiwan",
+            "Price": "6.32",
+            "Temperature": {
+                "Jan": [12,19],
+                "Feb": [13,19],
+                "Mar": [15,22],
+                "Apr": [18,25],
+                "May": [21,28],
+                "Jun": [24,31],
+                "Jul": [25,33],
+                "Aug": [25,32],
+                "Sep": [24,30],
+                "Oct": [21,27],
+                "Nov": [18,24],
+                "Dec": [14,20]
+            }
+        },
+        {
+            "Selected": "aus",
+            "Name": "Australia",
+            "Price": "13.47",
+            "Temperature": {
+                "Jan": [14,26],
+                "Feb": [15,26],
+                "Mar": [13,24],
+                "Apr": [11,21],
+                "May": [9,17],
+                "Jun": [8,15],
+                "Jul": [7,14],
+                "Aug": [7,15],
+                "Sep": [8,17],
+                "Oct": [9,20],
+                "Nov": [11,22],
+                "Dec": [13,24]
+            }
+        },
+        {
+            "Selected": "nzl",
+            "Name": "New Zealand",
+            "Price": "12.33",
+            "Temperature": {
+                "Jan": [17,24],
+                "Feb": [18,25],
+                "Mar": [16,23],
+                "Apr": [14,21],
+                "May": [12,18],
+                "Jun": [10,16],
+                "Jul": [9,15],
+                "Aug": [9,16],
+                "Sep": [10,17],
+                "Oct": [12,18],
+                "Nov": [13,20],
+                "Dec": [16,22]
+            }
+        },
+        {
+            "Selected": "nld",
+            "Name": "Netherlands",
+            "Price": "16.1",
+            "Temperature": {
+                "Jan": [2,7],
+                "Feb": [2,8],
+                "Mar": [4,10],
+                "Apr": [6,14],
+                "May": [10,17],
+                "Jun": [12,20],
+                "Jul": [15,22],
+                "Aug": [15,22],
+                "Sep": [13,19],
+                "Oct": [9,15],
+                "Nov": [6,11],
+                "Dec": [3,8]
+            }
+        },
+        {
+            "Selected": "deu",
+            "Name": "Germany",
+            "Price": "14.64",
+            "Temperature": {
+                "Jan": [-1,4],
+                "Feb": [-1,6],
+                "Mar": [1,10],
+                "Apr": [5,16],
+                "May": [9,20],
+                "Jun": [12,23],
+                "Jul": [15,26],
+                "Aug": [14,26],
+                "Sep": [11,21],
+                "Oct": [6,15],
+                "Nov": [3,9],
+                "Dec": [0,5]
+            }
+        },
+        {
+            "Selected": "fra",
+            "Name": "France",
+            "Price": "14.64",
+            "Temperature": {
+                "Jan": [2,8],
+                "Feb": [2,9],
+                "Mar": [4,13],
+                "Apr": [6,16],
+                "May": [10,20],
+                "Jun": [12,23],
+                "Jul": [15,26],
+                "Aug": [14,26],
+                "Sep": [11,22],
+                "Oct": [8,17],
+                "Nov": [5,12],
+                "Dec": [3,9]
+            }
+        },
+        {
+            "Selected": "esp",
+            "Name": "Spain",
+            "Price": "13.17",
+            "Temperature": {
+                "Jan": [2,12],
+                "Feb": [2,14],
+                "Mar": [5,18],
+                "Apr": [7,20],
+                "May": [11,24],
+                "Jun": [16,30],
+                "Jul": [19,34],
+                "Aug": [18,34],
+                "Sep": [14,29],
+                "Oct": [10,22],
+                "Nov": [5,15],
+                "Dec": [2,12]
+            }
+        },
+        {
+            "Selected": "dnk",
+            "Name": "Denmark",
+            "Price": "18.64",
+            "Temperature": {
+                "Jan": [-1,4],
+                "Feb": [-1,5],
+                "Mar": [1,7],
+                "Apr": [3,12],
+                "May": [8,16],
+                "Jun": [11,20],
+                "Jul": [14,22],
+                "Aug": [14,22],
+                "Sep": [11,18],
+                "Oct": [7,13],
+                "Nov": [4,9],
+                "Dec": [1,6]
+            }
+        },
+        {
+            "Selected": "prt",
+            "Name": "Portugal",
+            "Price": "11.71",
+            "Temperature": {
+                "Jan": [9,15],
+                "Feb": [10,16],
+                "Mar": [11,18],
+                "Apr": [12,19],
+                "May": [14,22],
+                "Jun": [16,25],
+                "Jul": [18,27],
+                "Aug": [18,27],
+                "Sep": [17,25],
+                "Oct": [15,22],
+                "Nov": [12,18],
+                "Dec": [10,16]
+            }
+        },
+        {
+            "Selected": "ita",
+            "Name": "Italy",
+            "Price": "14.64",
+            "Temperature": {
+                "Jan": [8,14],
+                "Feb": [8,14],
+                "Mar": [10,15],
+                "Apr": [12,17],
+                "May": [16,21],
+                "Jun": [20,25],
+                "Jul": [22,28],
+                "Aug": [23,28],
+                "Sep": [20,25],
+                "Oct": [17,22],
+                "Nov": [13,18],
+                "Dec": [10,15]
+            }
+        },
+        {
+            "Selected": "cze",
+            "Name": "Czech",
+            "Price": "10.67",
+            "Temperature": {
+                "Jan": [-3,4],
+                "Feb": [-2,5],
+                "Mar": [1,10],
+                "Apr": [4,15],
+                "May": [9,20],
+                "Jun": [12,23],
+                "Jul": [14,26],
+                "Aug": [14,26],
+                "Sep": [10,20],
+                "Oct": [6,14],
+                "Nov": [2,8],
+                "Dec": [-1,4]
+            }
+        },
+        {
+            "Selected": "gbr",
+            "Name": "United Kingdom",
+            "Price": "11.99",
+            "Temperature": {
+                "Jan": [3,9],
+                "Feb": [3,9],
+                "Mar": [4,12],
+                "Apr": [6,15],
+                "May": [9,18],
+                "Jun": [11,21],
+                "Jul": [14,23],
+                "Aug": [13,23],
+                "Sep": [11,20],
+                "Oct": [8,16],
+                "Nov": [5,12],
+                "Dec": [3,9]
+            }
+        }
+    ]
+}

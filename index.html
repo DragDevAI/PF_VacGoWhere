@@ -21,19 +21,21 @@
         <div id="divDisclaimer" class="menu">Disclaimer</div>
         <div id="menuDisplay"></div>
     </div>
-    <hr id="hrBridge" />
-    <hr id="hrHang" />
+    <hr id="hrUpperBridgeLeft" />
+    <hr id="hrUpperBridgeRight" />
     <div id="divGeoDataBox">
         <div id="divGeoData">
             <h2>Welcome, my friends!</h2>
             <h3>Today is: <p id="todayDisplay"></p></h3>
             <h3>You are currently in: <p id="locationDisplay"></p></h3>
+            <div id="divLogo"><img src="img/logo.png" width="100%" height="100%"/></div>
         </div>
     </div>
     <div id="divWhereWhen">
         <label for="destination">Choose a destination:</label>
         <select id="dest">Please select one
-            <option value="jpn" selected="selected">Japan</option>
+            <option value="nilDest" selected="selected">---</option>
+            <option value="jpn">Japan</option>
             <option value="kor">South Korea</option>
             <option value="tha">Thailand</option>
             <option value="vnm">Vietnam</option>
@@ -56,24 +58,48 @@
         </select>
         <p><i>(The above destinations are the most popular among Singaporeans)</i></p>
     </br>
-        <label for="time">Which month you plan to go:</label>
-        <select id="month">Please select one
-            <option value="1" selected = "selected">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
+        <label for="language">Let's learn simple vocabulary in local language:</label>
+        <select id="lang" disabled>Please select one
+            <option value="nilLang" selected = "selected">---</option>
+            <option value="hello">Hello</option>
+            <option value="bye">Good bye</option>
+            <option value="thank">Thank you</option>
+            <option value="sorry">Sorry</option>
+            <option value="yes">Yes</option>
+            <option value="nah">No</option>
         </select>
-        <p><i>(Historical temperature data of selected location/month.)</i></p>
+        <p><i>(The above are selected from the most common words in any language)</i></p>
     </div>
-    <div id="divWeather">Under construction</div>
+    <hr id="hrLowerBridge" />
+    <div id="divCharacter">
+        <p id="pLanguage"></p>
+        <img id="imgCharacter"/>
+    </div>
+    <hr id="hrMidBridge" />
+    <div id="divWeatherBox">
+        <div id="divWeather">
+            <label for="time">Which month you plan to go:</label>
+            <select id="month" disabled>Please select one
+                <option value="0" selected = "selected">---</option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+            </select>
+            <p><i>Historical temperature of the capital city (save for Australia - Melbourne) (for more, please consider paid version)</i></p>    
+        <div id="tempMin">Low:<p id="pTempMin"></p></div>
+        <div id="tempMax">High:<p id="pTempMax"></p></div>
+        </div>
+    </div>
+    <div id="divTriviaDisplayBox"></div>
     <div id="divTriviaDisplay">
         <h4>Trivia about the destination of your choice:</h4>
         <p>Capital: <span id="triviaCapital"></span></p>

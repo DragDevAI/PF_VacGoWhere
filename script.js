@@ -1,11 +1,13 @@
 let menuMsgContent = ""; // Variable to display the message on the menu once user hover the mouse over the menu
 // The following three are the message to be assigned the menuMsgContent depending on the context
-const aboutMessage = "This is a simple app catered to the world travellers and travel enthusiasts out there. We aim to provide users some useful information in order for them to make an informed decision about the destination of their choice.";
-const howToUseMessage = "Simply select the destination that you prefer and find out.";
-const disclaimerMessage = "Under no circumstances shall we be liable for anything that happened to you using this app. You use this app at your own risk.";
+const aboutMessage = "This simple page is catered to the world travellers and travel enthusiasts out there. We aim to assist users in making an informed decision about the destination of their choice. Your feedback are welcome for our improvement.";
+const howToUseMessage = "Simply select the destination that you prefer. You will find trivial information (e.g., which side road cars go) together with useful information (e.g., real time exchange rates) of the destination that you consider.";
+const disclaimerMessage = "Under no circumstances shall we be liable for any loss or damage (including, without limitation, mental/physical injury, death, or loss and/or damage to property) arising out of, or in connection with, the review, marking, testing and/or use of this page.";
 
 let selectDest = ""; // Variable to hold the selection of user of the destination (by way of the country code)
 let selectCurr = ""; // Variable to hold the currency of the selected country destination
+let selectLang = ""; // Variable to hold the language of the selected country destination
+let selectMonth = ""; // Variable to hold the month of the intended trip
 
 // 2D Array to hold the database of the country codes and their currency (for exchange rates)
 const countryData = [
@@ -13,6 +15,64 @@ const countryData = [
     ['JPY','KRW','THB','VND','IDR','HKD','TWD','AUD','NZD','EUR','EUR','EUR','EUR','EUR','EUR','EUR','EUR','GBP'], //for calling foreign exchange API
     ['jp','kr','th','vn','id','hk','tw','au','nz','nl','de','fr','es','dk','pt','it','cz','gb'] //for calling flag API
 ]
+
+// Object holding common words in all languages covered under this app (too lazy to build this up in the API)
+const countryLang = {
+    'jpn': {
+        'hello':'kon\'nichiwa',"bye": 'sayonara',"thank": 'arigatō',"sorry": 'gomen\'nasai', "yes":'hai',"nah":'Īe'
+    },
+    'kor': {
+        'hello':'annyeonghaseyo',"bye": 'annyeong',"thank": 'gamsahabnida',"sorry": 'mianhaeyo', "yes":'ye',"nah":'aniyo'
+    },
+    'tha': {
+        'hello':'s̄wạs̄dī',"bye": 'Lā k̀xn',"thank": 'K̄hxbkhuṇ',"sorry": 'C̄hạn k̄hxthos̄ʹ', "yes":'Chı̀',"nah":'Lek̄h thī̀'
+    },
+    'vnm': {
+        'hello':'Xin chào',"bye": 'Tạm biệt',"thank": 'Cảm ơn',"sorry": 'Xin lỗi', "yes":'có',"nah":'không'
+    },
+    'idn': {
+        'hello':'halo',"bye": 'selamat tinggal',"thank": 'terima kasih',"sorry": 'saya minta maaf', "yes":'ya',"nah":'tidak'
+    },
+    'hkg': {
+        'hello':'nei hou',"bye": 'joi gin',"thank": 'do je',"sorry": 'deui m jyu', "yes":'hai',"nah":'m hai'
+    },
+    'twn': {
+        'hello':'nǐ hǎo',"bye": 'zàijiàn',"thank": 'xièxiè',"sorry": 'duìbùqǐ', "yes":'duì',"nah":'bù'
+    },
+    'aus': {
+        'hello':'hello, mate!',"bye": 'bye, mate!',"thank": 'thanks, mate!',"sorry": 'sorry, mate!', "yes":'yes, mate!',"nah":'no, mate!'
+    },
+    'nzl': {
+        'hello':'ora',"bye": 'pū',"thank": 'mauruuru',"sorry": 'e pouri ana ahau', "yes":'āe',"nah":'kāo'
+    },
+    'nld': {
+        'hello':'hallo',"bye": 'tot ziens',"thank": 'bedankt',"sorry": 'het spijt me', "yes":'ja',"nah":'nee'
+    },
+    'deu': {
+        'hello':'hallo',"bye": 'tschüss',"thank": 'danke',"sorry": 'es tut mir leid', "yes":'ja',"nah":'nein'
+    },
+    'fra': {
+        'hello':'salut',"bye": 'au revoir',"thank": 'merci',"sorry": 'desolee', "yes":'oui',"nah":'non'
+    },
+    'esp': {
+        'hello':'hola',"bye": 'adiós',"thank": 'gracias',"sorry": 'lo siento', "yes":'sí',"nah":'no'
+    },
+    'dnk': {
+        'hello':'hej',"bye": 'hej hej',"thank": 'tak skal du have',"sorry": 'det er jeg ked af', "yes":'ja',"nah":'ingen'
+    },
+    'prt': {
+        'hello':'olá',"bye": 'bye bye',"thank": 'obrigado',"sorry": 'sinto muito', "yes":'sim',"nah":'não'
+    },
+    'ita': {
+        'hello':'ciao',"bye": 'ciao ciao',"thank": 'grazie',"sorry": 'scusa', "yes":'sì',"nah":'no'
+    },
+    'cze': {
+        'hello':'ahoj',"bye": 'ahoj',"thank": 'děkuji',"sorry": 'promiňte', "yes":'ano',"nah":'ne'
+    },
+    'gbr': {
+        'hello':'hello (duh!)',"bye": 'bye (duh!)',"thank": 'thank (duh!)',"sorry": 'sorry (duh!)', "yes":'yes (duh!)',"nah":'no (duh!)'
+    }
+}
 
 //Function to get current date and time for display
 function getCurrentDateAndTime() {
@@ -85,7 +145,7 @@ async function getCurrentForex(selectCurr) {
 //Function to read self-developped API to compare price of McMeal among the destination of choice
 async function getMcMealPrice() {
     mcMealIndexDisplay();
-    const macResponse = await fetch("https://api.jsonsilo.com/public/47dfbcd9-f615-47d6-9cb7-5b8742045d4a");
+    const macResponse = await fetch("APIs\/vacaStats.json");
     const mac = await macResponse.json();
 
     let xValues = ["Singapore", ""];
@@ -111,9 +171,12 @@ async function getMcMealPrice() {
         options: {
             legend: {display: false},
             scales: {
-                y: {
-                    beginAtZero: true
-                }
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        min: 0
+                    }
+                }]
             }
         }
     });
@@ -143,7 +206,7 @@ async function getTrivialInfo(selectDest) {
     }
 }
 
-//Function to read into API
+//Function to read into API and get the picture of the flag of destination
 function getFlag(selectDest) {
     let imgCountryCode = '';
     for (i=0;i<countryData[0].length;i++) {
@@ -156,13 +219,77 @@ function getFlag(selectDest) {
     flagImg.src = imgURL;
 }
 
-//Get value from user input of destination of choice, call APIs and display trivial info as well as exchange rates
+//Function to display the Samurai character each representating the country of choice
+function getCharacter(selectDest) {
+    let characterImg = document.getElementById("imgCharacter");
+    characterImg.src = ("img\/" + selectDest + ".png");
+}
+
+//Function to display the common words in local language
+function getLanguage(selectDest,selectLang) {
+    let langDisplay = document.getElementById("pLanguage");
+    langDisplay.innerHTML = countryLang[selectDest][selectLang];
+}
+
+//Function to display the temperature of the destination on the month of choice
+async function getTemperature(selectDest,selectMonth) {
+    const tempResponse = await fetch("APIs\/vacaStats.json");
+    const temp = await tempResponse.json();
+    let tempMin = 0;
+    let tempMax = 0;
+
+    for (i=1; i<19; i++) {
+        if (temp.Countries[i].Selected === selectDest) {
+            tempMin = (temp.Countries[i].Temperature[selectMonth][0]) + ("<sup>o</sup>C");
+            tempMax = temp.Countries[i].Temperature[selectMonth][1] + ("<sup>o</sup>C");
+        }
+    }
+    let tempMinDisplay = document.getElementById("pTempMin");
+    let tempMaxDisplay = document.getElementById("pTempMax");
+
+    tempMinDisplay.innerHTML = tempMin;
+    tempMaxDisplay.innerHTML = tempMax;
+
+}
+
+//Get value from user input of destination of choice, call various APIs and display trivial info, exchange rates and chart of McMeal index
 document.getElementById('dest').addEventListener('change', function() {
+    document.getElementById("lang").disabled = false;
+    document.getElementById("month").disabled = false;
     selectDest = document.getElementById("dest").value;
-    getCurrency(selectDest); //Calling function to retrieve currency of the destination of choice
-    currencyDisplay(selectCurr); //Display the currency symbol of the destination
-    getCurrentForex(selectCurr); //Display the exchange rate between Singapore Dollars and the currency of the destination
-    getMcMealPrice(); //Display McMeal index by comparing the cost of McMeal in Singapore and the destination
-    getTrivialInfo(selectDest); //Display trivial info about the selected destination
-    getFlag(selectDest); //Display flags
+    if (selectDest === 'nilDest') {
+        location.reload();
+    } else {
+        getCurrency(selectDest); //Calling function to retrieve currency of the destination of choice
+        currencyDisplay(selectCurr); //Display the currency symbol of the destination
+        getCurrentForex(selectCurr); //Display the exchange rate between Singapore Dollars and the currency of the destination
+        getMcMealPrice(); //Display McMeal index by comparing the cost of McMeal in Singapore and the destination
+        getTrivialInfo(selectDest); //Display trivial info about the selected destination
+        getFlag(selectDest); //Display flags
+        getCharacter(selectDest); //Display Samurai character    
+    }
+})
+
+//Get value from user input of common words to put in local language of the destination of choice
+document.getElementById('lang').addEventListener('change', function() {
+    selectLang = document.getElementById("lang").value;
+    let langDisplay = document.getElementById("pLanguage");
+    if (selectLang === 'nilLang') {
+        langDisplay.innerHTML = "---";
+    } else {
+        getLanguage(selectDest,selectLang);
+    }
+})
+
+//Get value from user input of the month that they intend to travel
+document.getElementById('month').addEventListener('change', function() {
+    selectMonth = document.getElementById("month").value;
+    let tempMinDisplay = document.getElementById("pTempMin");
+    let tempMaxDisplay = document.getElementById("pTempMax");
+    if (selectMonth === '0') {
+        tempMinDisplay.innerHTML = "-";
+        tempMaxDisplay.innerHTML = "-";
+    } else {
+        getTemperature(selectDest,selectMonth);
+    }
 })

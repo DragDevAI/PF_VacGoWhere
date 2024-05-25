@@ -24,6 +24,17 @@ h1, h2, h3, h4, h5, h6, div, #pCanvas {
     font-weight: 500;
 }
 
+#pLanguage {
+    position: fixed;
+    top: 18%;
+    left: 45%;
+    width: 19%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: xx-large;
+    text-align: center;
+}
+
 p {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
@@ -34,7 +45,7 @@ p {
     top: 10%;
     width: 30%;
     right: 2%;
-    height: 19%;
+    height: 20%;
     border: 2px solid #137450;
     border-radius: 8px;
 }
@@ -49,20 +60,105 @@ p {
     font-size: 1cqw;
 }
 
-#hrBridge {
+#divLogo {
     position: fixed;
-    top: 17%;
-    width: 27%;
-    left: 41%;
-    border: 3px solid #d31a1a;
+    top: 12%;
+    width: 9%;
+    right: 21%;
+    height: 16%;
 }
 
-#hrHang {
+#divWeatherBox {
     position: fixed;
-    top: 17%;
-    width: 0.5%;
-    left: 55%;
-    height: 5%;
+    top: 32%;
+    width: 30%;
+    right: 2%;
+    height: 25%;
+    border: 2px solid #137450;
+    border-radius: 8px;
+}
+
+#divWeather {
+    position: fixed;
+    top: 33%;
+    width: 28%;
+    right: 3%;
+    height: 23%;
+    text-align: center;
+    font-size: 1cqw;
+}
+
+#tempMax {
+    position: fixed;
+    top: 43%;
+    width: 10%;
+    right: 6%;
+    height: 12%;
+    text-align: left;
+    font-size: 1cqw;
+}
+
+#pTempMax {
+    position: fixed;
+    top: 45%;
+    width: 6%;
+    right: 7%;
+    height: 9%;
+    text-align: center;
+    font-size: xx-large;
+    font-style: bold;
+}
+
+#tempMin {
+    position: fixed;
+    top: 43%;
+    width: 10%;
+    right: 18%;
+    height: 12%;
+    text-align: left;
+    font-size: 1cqw;
+}
+
+#pTempMin {
+    position: fixed;
+    top: 45%;
+    width: 6%;
+    right: 19%;
+    height: 9%;
+    text-align: center;
+    font-size: xx-large;
+    font-style: bold;
+}
+
+#hrUpperBridgeLeft {
+    position: fixed;
+    top: 18%;
+    left: 41%;
+    width: 3%;
+    border: 5px solid #d31a1a;
+}
+
+#hrUpperBridgeRight {
+    position: fixed;
+    top: 25%;
+    left: 65%;
+    width: 3%;
+    border: 5px solid #d31a1a;
+}
+
+#hrLowerBridge {
+    position: fixed;
+    top: 62%;
+    left: 41%;
+    width: 3%;
+    border: 5px solid #d31a1a;
+}
+
+#hrMidBridge {
+    position: fixed;
+    top: 43%;
+    left: 65%;
+    width: 3%;
     border: 5px solid #d31a1a;
 }
 
@@ -136,18 +232,28 @@ p {
     font-size: 1cqw;
 }
 
-#divTriviaDisplay {
+#divTriviaDisplayBox {
     position: fixed;
     top: 39%;
     left: 2%;
     width: 39%;
+    height: 55%;
+    border: 2px solid #137450;
+    border-radius: 8px;
+}
+
+#divTriviaDisplay {
+    position: fixed;
+    top: 41%;
+    left: 4%;
+    width: 35%;
     height: 28%;
     font-size: 1cqw;
 }
 
 #divFlag {
     position: fixed;
-    top: 43%;
+    top: 45%;
     left: 20%;
     width: 17%;
     height: 17%;
@@ -155,44 +261,54 @@ p {
 
 #imgFlag {
     position: fixed;
-    top: 45%;
+    top: 47%;
     left: 22%;
-    width: 15%;
-    height: 15%;
+    width: 13%;
+    height: 13%;
+    border: 1px dotted #137450;
+    border-radius: 8px;
 }
 
 #pCanvas {
     position: fixed;
-    top: 69%;
+    top: 71%;
     left: 5%;
-    width: 30%;
+    width: 46%;
     font-size: 1cqw;
     text-align: justify;
 }
 
 #divCanvas {
     position: fixed;
-    top: 73%;
-    left: 9%;
-    width: 20%;
+    top: 75%;
+    left: 11%;
+    width: 18%;
     height: 17%;
 }
 
-#divWeather {
+#divCharacter {
     position: fixed;
-    top: 22%;
-    left: 45%;
-    width: 20%;
-    height: 20%;
+    top: 16%;
+    left: 44%;
+    width: 21%;
+    height: 73%;
     border: 2px solid #137450;
     border-radius: 8px;
     text-align: center;
     font-size: 1cqw;
 }
 
+#imgCharacter {
+    position: fixed;
+    top: 25%;
+    left: 45%;
+    width: 19%;
+    height: 63%;
+}
+
 #advertisement {
-    position: absolute;
-    top: 300px;
+    position: fixed;
+    top: 60%;
     right: 2%;
     width: 30%;
     color: black;
